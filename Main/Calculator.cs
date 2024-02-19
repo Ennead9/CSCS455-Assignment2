@@ -62,7 +62,13 @@ namespace ConsoleCalculator
         public static double Divide(double operand1, double operand2)
         {
             //TODO:Validation for divide by 0
-            return operand1 / operand2;
+            if(operand2 == 0)
+            {
+                throw new DivideByZeroException();
+            } else
+            {
+                return operand1 / operand2;
+            }
         }
     }
 }
