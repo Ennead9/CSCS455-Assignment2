@@ -60,12 +60,12 @@ namespace ConsoleCalculator.Tests
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(DivideByZeroException))]
         public void DivideByZeroTest()
         {
             // Arrange & Act
             double result = Calculator.Divide(4, 0);
             // Assert
-            Assert.IsNull(result);
         }
     }
 }
