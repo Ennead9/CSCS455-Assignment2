@@ -15,16 +15,17 @@ namespace ConsoleCalculator.Tests
             Assert.IsNotNull(calc);
 
         }
+        /*
         [TestMethod()]
         public void AddTest()
         {
             double num1 = 2, num2 = 3;
             var calc = new Calculator(num1, num2);
             Assert.IsTrue(calc.Add() == num1 + num2);
-        }
+        }*/
 
         [TestMethod()]
-        public void TutorialAddTest()
+        public void AddTest()
         {
             // Arrange (& Act?)
             double result = Calculator.Add(1, 2);
