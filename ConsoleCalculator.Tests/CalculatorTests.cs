@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FluentAssertions;
 using ConsoleCalculator;
 
 
@@ -30,7 +31,10 @@ namespace ConsoleCalculator.Tests
             // Arrange (& Act?)
             double result = Calculator.Add(1, 2);
             // Assert
-            Assert.AreEqual(3, result);
+            // Non-fluent: Assert.AreEqual(3, result);
+
+            // Fluent Assertion
+            result.Should().Be(3);
         }
 
         [TestMethod()]
@@ -39,7 +43,10 @@ namespace ConsoleCalculator.Tests
             // Arrange & Act
             double result = Calculator.Subtract(3, 1);
             // Assert
-            Assert.AreEqual(2, result);
+            // Non-fluent: Assert.AreEqual(2, result);
+
+            // Fluent Assertion
+            result.Should().Be(2);
         }
 
         [TestMethod()]
@@ -48,7 +55,10 @@ namespace ConsoleCalculator.Tests
             // Arrange & Act
             double result = Calculator.Multiply(1, 2);
             // Assert
-            Assert.AreEqual(2, result);
+            // Non-fluent: Assert.AreEqual(2, result);
+
+            // Fluent Assertion
+            result.Should().Be(2);
         }
 
         [TestMethod()]
@@ -57,7 +67,10 @@ namespace ConsoleCalculator.Tests
             // Arrange & Act
             double result = Calculator.Divide(8, 4);
             // Assert
-            Assert.AreEqual(2, result);
+            // Non-fluent: Assert.AreEqual(2, result);
+
+            // Fluent Assertion
+            result.Should().Be(2);
         }
 
         [TestMethod()]
