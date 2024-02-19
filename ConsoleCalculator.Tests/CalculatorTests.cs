@@ -52,5 +52,15 @@ namespace ConsoleCalculator.Tests
             // Assert
             Assert.AreEqual(2, result);
         }
+
+        [TestMethod()]
+        public void DivideTest()
+        {
+            // Arrange & Act
+            double result = Calculator.Divide(8, 4);
+
+            // Assert
+            Assert.AreEqual(2, result);
+        }
     }
 }
