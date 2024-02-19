@@ -42,5 +42,15 @@ namespace ConsoleCalculator.Tests
             // Assert
             Assert.AreEqual(2, result);
         }
+
+        [TestMethod()]
+        public void MultiplyTest()
+        {
+            // Arrange & Act
+            double result = Calculator.Multiply(1, 2);
+
+            // Assert
+            Assert.AreEqual(2, result);
+        }
     }
 }
