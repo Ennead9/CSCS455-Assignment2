@@ -41,49 +41,49 @@ namespace ConsoleCalculator.Tests
             result.Should().Be(expected);
         }
         [DataTestMethod]
-        [DataRow(1, 2, 3)]
-        [DataRow(2, 3, 5)]
-        [DataRow(4, 5, 9)]
+        [DataRow(3, 2, 1)]
+        [DataRow(5, 3, 2)]
+        [DataRow(9, 5, 4)]
         [TestMethod()]
         public void SubtractTest(double num1, double num2, double expected)
         {
             // Arrange & Act
-            double result = Calculator.Subtract(3, 1);
+            double result = Calculator.Subtract(num1, num2);
             // Assert
             // Non-fluent: Assert.AreEqual(2, result);
 
             // Fluent Assertion
-            result.Should().Be(2);
+            result.Should().Be(expected);
         }
         [DataTestMethod]
-        [DataRow(1, 2, 3)]
-        [DataRow(2, 3, 5)]
-        [DataRow(4, 5, 9)]
+        [DataRow(1, 2, 2)]
+        [DataRow(2, 3, 6)]
+        [DataRow(4, 5, 20)]
         [TestMethod()]
         public void MultiplyTest(double num1, double num2, double expected)
         {
             // Arrange & Act
-            double result = Calculator.Multiply(1, 2);
+            double result = Calculator.Multiply(num1, num2);
             // Assert
             // Non-fluent: Assert.AreEqual(2, result);
 
             // Fluent Assertion
-            result.Should().Be(2);
+            result.Should().Be(expected);
         }
         [DataTestMethod]
-        [DataRow(1, 2, 3)]
-        [DataRow(2, 3, 5)]
-        [DataRow(4, 5, 9)]
+        [DataRow(2, 2, 1)]
+        [DataRow(6, 3, 2)]
+        [DataRow(20, 4, 5)]
         [TestMethod()]
         public void DivideTest(double num1, double num2, double expected)
         {
             // Arrange & Act
-            double result = Calculator.Divide(8, 4);
+            double result = Calculator.Divide(num1, num2);
             // Assert
             // Non-fluent: Assert.AreEqual(2, result);
 
             // Fluent Assertion
-            result.Should().Be(2);
+            result.Should().Be(expected);
         }
 
         [TestMethod()]
