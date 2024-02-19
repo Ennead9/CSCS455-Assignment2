@@ -32,5 +32,15 @@ namespace ConsoleCalculator.Tests
             // Assert
             Assert.AreEqual(3, result);
         }
+
+        [TestMethod()]
+        public void SubtractTest()
+        {
+            // Arrange & Act
+            double result = Calculator.Subtract(3, 1);
+
+            // Assert
+            Assert.AreEqual(2, result);
+        }
     }
 }
